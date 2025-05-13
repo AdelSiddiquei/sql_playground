@@ -2,7 +2,7 @@ import psycopg
 
 # Connect to the PostgreSQL database
 conn = psycopg.connect(
-    dbname="sandbox_db",
+    dbname="coffee_sales",
     user="postgres",
     password="postgres",
     host="localhost",
