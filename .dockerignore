@@ -1,0 +1,43 @@
+# Exclude Git directory
+.git/
+
+# Exclude local Postgres data directory
+pgdata/
+
+# Exclude Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Exclude virtual environment directories
+.venv/
+venv/
+ENV/
+env/
+
+# Exclude Python egg-info directories
+*.egg-info/
+
+# Exclude pip cache files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Exclude test and coverage files
+.coverage
+coverage/
+.pytest_cache/
+.tox/
+
+# Exclude IDE/editor directories
+.vscode/
+.idea/
+
+# Exclude OS-generated files
+.DS_Store
+Thumbs.db
+
+# Exclude log files
+*.log
+
+# Exclude environment variable files
+.env
