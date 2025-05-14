@@ -25,17 +25,17 @@ services:
     depends_on:
       - db  # pgAdmin starts after the db container
 
-  app:
-    build: .
-    depends_on:
-      - db  # App container starts after the db container
-    volumes:
-      - ./data:/app/data            # Mount the data folder inside the app container
-      - ./your_package:/app         # Mount package (scripts) inside the app container
-    environment:
-      - POSTGRES_HOST=db
-      - POSTGRES_PORT=5432
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mysecretpassword
-      - POSTGRES_DB=bike_store
-    command: ["bash"]  # Start an interactive Bash shell on run
+  # app:
+  #   build: .
+  #   depends_on:
+  #     - db  # App container starts after the db container
+  #   volumes:
+  #     - ./data:/app/data            # Mount the data folder inside the app container
+  #     - ./your_package:/app         # Mount package (scripts) inside the app container
+  #   environment:
+  #     - POSTGRES_HOST=db
+  #     - POSTGRES_PORT=5432
+  #     - POSTGRES_USER=postgres
+  #     - POSTGRES_PASSWORD=mysecretpassword
+  #     - POSTGRES_DB=bike_store
+  #   command: ["tail -f /dev/null"]  # Start an interactive Bash shell on run
