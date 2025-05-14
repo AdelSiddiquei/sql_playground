@@ -39,9 +39,6 @@ Thumbs.db
 # Exclude log files
 *.log
 
-# Exclude environment variable files
-.env
-
 README.md
 .ruff_cache
 uv.lock
