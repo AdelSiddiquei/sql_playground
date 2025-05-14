@@ -41,3 +41,6 @@ Thumbs.db
 
 # Exclude environment variable files
 .env
+
+#Exclude Dockerfile, remove if creating container with python dependancies, i.e. the third container in docker-comose.yml
+dockerfile
