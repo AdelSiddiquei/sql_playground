@@ -19,6 +19,7 @@ git clone https://github.com/AdelSiddiquei/sql_playground.git
 Create a `.env` file in the project root with:
 
 ```env
+POSTGRES_HOST=localhost
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=mysecretpassword
 POSTGRES_DB=bike_store
