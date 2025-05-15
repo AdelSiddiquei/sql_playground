@@ -4,10 +4,10 @@ loader = loader.PostgresCSVLoader()
 
 csv_files = [
     "data/brands.csv",
-    "data/categories.csv",                      #Can change this script for any list of csv's that are named appropriately
+    "data/categories.csv",  # Can change this script for any list of csv's that are named appropriately
     "data/customers.csv",
     "data/order_items.csv",
-    "data/staff.csv",
+    "data/staffs.csv",
     "data/stocks.csv",
     "data/stores.csv",
 ]
