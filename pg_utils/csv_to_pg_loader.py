@@ -3,7 +3,8 @@ import psycopg
 import pandas as pd
 from dotenv import load_dotenv
 
-'''Needs Update for also choosing data types'''
+"""Needs Update for also choosing data types"""
+
 
 class PostgresCSVLoader:
     def __init__(self):
@@ -66,7 +67,9 @@ class PostgresCSVLoader:
 
         print(f"Data loaded into '{table_name}' successfully.")
 
-    def process_csv(self, csv_path):                #need to update to also allow manual col names and data types
+    def process_csv(
+        self, csv_path
+    ):  # need to update to also allow manual col names and data types
         # Full csv to pg table pipelin.
         df, table_name = self.create_table(csv_path)
         self.load_data(df, table_name)
