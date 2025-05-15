@@ -124,5 +124,6 @@ You now have a local Postgres + pgAdmin stack, plus a Python layer to automate t
 
 ## Future Work
 These are ideas for future updates to the package:
-- Add to pg_utils so that more querys can be can be done easily.
+- Add to `pg_utils` so that more querys can be can be done easily.
+- Utilise `pytest` and write tests to ensure `pg_utils` scripts are always working.
 
