@@ -176,6 +176,7 @@ cython_debug/
 #Ignore csv datasets
 *.csv
 
+#Ignore mounted directory from container volumes.
 pgdata/
 
 uv.lock
