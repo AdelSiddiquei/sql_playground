@@ -1,5 +1,5 @@
 import os
-import psycopg2
+import psycopg
 import pandas as pd
 from dotenv import load_dotenv
 
@@ -11,7 +11,7 @@ class PostgresCSVLoader:
         load_dotenv()
 
         # Connect to PostgreSQL database using credentials from .env
-        self.conn = psycopg2.connect(
+        self.conn = psycopg.connect(
             host=os.getenv("POSTGRES_HOST"),
             port=os.getenv("POSTGRES_PORT"),
             user=os.getenv("POSTGRES_USER"),
