@@ -34,7 +34,7 @@ The datasets used in this project can be found [here](https://www.kaggle.com/dat
 ## 2. Launch the stack
 
 ```bash
-docker-compose up -d
+docker-compose up -d          #use the detached -d option so that you can still use your terminal after launching.
 ```
 
 - **Postgres** is on `localhost:5432`  
@@ -51,13 +51,17 @@ docker-compose up -d
    - **Username**: `${POSTGRES_USER}`  
    - **Password**: `${POSTGRES_PASSWORD}`  
 
+**NOTE** When working from the pgAdmn container the database host will be `db`, however if connecting to the database container externally, i.e. through a python script it will be different.
+
 ## 3. Next Steps
 
-At this point you have two options for interacting with the database, you can use the pgadmin interface which is very intuitive and has many guides online.
+At this point you have two options for interacting with the database 
 
-OR
+1. You may use the pgadmin interface which is very intuitive and has many guides online. 
 
-You can use the functions set up in pg_utils to interact with and update the database. The instructions for this are detailed below.
+**OR*
+
+2. You can use the functions set up in pg_utils to interact with and update the database. The instructions for this are detailed below.
 
 ## 4. Python / psycopg scripts
 
@@ -82,7 +86,7 @@ pip install -e .
 
 ```bash
 pip install uv
-uv sync  # reads pyproject.toml and sets up .venv/uv.lock
+uv sync  # reads pyproject.toml to set up .venv and uv.lock
 source .venv/bin/activate
 ```
 
@@ -90,10 +94,7 @@ Once the environment is ready, you can write scripts using the functions from `p
 
 ### 4.2. Example usage
 
-```python
-
-
-```
+See loading_script.py for an example of how to use the functions from pg_utils
 
 ## Project Layout
 
@@ -115,8 +116,13 @@ Once the environment is ready, you can write scripts using the functions from `p
 ## Tear down
 
 ```bash
-docker-compose down #add -v option to delete all volumes also
+docker-compose down -v
 ```
-NOTE: Deleting the associated volumes of the containers will mean you lose all changes you made to the database.
+**NOTE**: The -v option deletes any named volumes in the container when closing it. This is necessary to avoid conflicts with our mounted directory `pgdata/` in future sessions. If you ever wish to start fresh when launching, simply rename/delete `pgdata/`, or move it outside of the working directory.
 
 You now have a local Postgres + pgAdmin stack, plus a Python layer to automate table and data chores. Enjoy!
+
+## Future Work
+These are ideas for future updates to the package:
+- Add to pg_utils so that more querys can be can be done easily.
+
