@@ -1,4 +1,4 @@
 psycopg[binary]
-dotenv
+python-dotenv
 pandas
 dotenv
