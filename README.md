@@ -94,7 +94,7 @@ Once the environment is ready, you can write scripts using the functions from `p
 
 ### 4.2. Example usage
 
-See loading_script.py for an example of how to use the functions from pg_utils
+See scripts/loading_script.py for an example of how to use the functions from pg_utils
 
 ## Project Layout
 
@@ -108,6 +108,9 @@ See loading_script.py for an example of how to use the functions from pg_utils
 │   ├── __init__.py
 │   └── ...
 ├── requirements.txt
+├── scripts            # home for any custom scripts
+|   ├── __init__.py
+│   └── ...
 ├── pyproject.toml     # project metadata
 ├── uv.lock            # locked Python deps for uv
 └── README.md          # this file
@@ -125,5 +128,6 @@ You now have a local Postgres + pgAdmin stack, plus a Python layer to automate t
 ## Future Work
 These are ideas for future updates to the package:
 - Add to `pg_utils` so that more querys can be can be done easily.
+- Update `loading_script.py` to check against primary keys for pre-existing records when loading to table to avoid duplicates.
 - Utilise `pytest` and write tests to ensure `pg_utils` scripts are always working.
 
