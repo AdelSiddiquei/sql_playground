@@ -178,5 +178,3 @@ cython_debug/
 
 #Ignore mounted directory from container volumes.
 pgdata/
-
-uv.lock
