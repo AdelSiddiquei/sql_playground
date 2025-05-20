@@ -86,3 +86,6 @@ class PostgresCSVLoader:
                             WHERE table.schema = public
                             ORDER BY table_name
         """)
+        results = self.cursor.fetchall()
+        tables = [row[0] for row in results]
+        return tables
