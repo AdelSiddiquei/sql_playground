@@ -78,3 +78,11 @@ class PostgresCSVLoader:
         # Close the cursor and connection
         self.cursor.close()
         self.conn.close()
+
+    def list_tables(self):
+        self.cursor.execute("""
+                            SELECT table_name
+                            FROM information_schema.tables
+                            WHERE table.schema = public
+                            ORDER BY table_name
+        """)
