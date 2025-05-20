@@ -1,4 +1,4 @@
-from pg_utils import csv_to_pg_loader as loader
+from app.pg_utils import loader
 
 loader = loader.PostgresCSVLoader()
 
